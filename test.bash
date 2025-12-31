@@ -4,6 +4,10 @@
 
 set -e
 
+source /opt/ros/humble/setup.bash
+
+source install/setup.bash
+
 echo "[TEST] topic_watchdog I/O test start"
 
 # watchdog 起動
@@ -15,10 +19,9 @@ ros2 run mypkg topic_watchdog \
 
 WATCHDOG_PID=$!
 
-# DDS discovery 安定待ち
 sleep 1
 
-# 1回だけ publish（これが超重要）
+# 1回だけ publish
 ros2 topic pub /test_topic std_msgs/msg/String "{data: test}" --once
 
 # WARN が来るまで最大10秒待つ
@@ -42,3 +45,4 @@ else
   cat /tmp/watchdog.log || true
   exit 1
 fi
+
