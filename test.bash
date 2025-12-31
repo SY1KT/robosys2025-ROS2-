@@ -15,9 +15,15 @@ ros2 run mypkg topic_watchdog \
 
 WATCHDOG_PID=$!
 
+# DDS discovery 安定待ち
+sleep 1
+
+# 1回だけ publish（これが超重要）
+ros2 topic pub /test_topic std_msgs/msg/String "{data: test}" --once
+
 # WARN が来るまで最大10秒待つ
 STATUS=$(timeout 10 bash -c '
-  ros2 topic echo /watchdog/status 2>/dev/null |
+  ros2 topic echo /watchdog/status |
   grep "^data: WARN:"
 ' || true)
 
@@ -32,9 +38,7 @@ if [ -n "${STATUS}" ]; then
   exit 0
 else
   echo "[FAIL] watchdog WARN not detected"
+  echo "[DEBUG] watchdog log:"
+  cat /tmp/watchdog.log || true
   exit 1
 fi
-
-
-
-
