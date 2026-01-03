@@ -21,7 +21,7 @@ WATCHDOG_PID=$!
 
 sleep 1
 
-# 1回だけ publish
+# 1回publish
 ros2 topic pub /test_topic std_msgs/msg/String "{data: test}" --once
 
 # WARN が出るまで最大10秒待つ
