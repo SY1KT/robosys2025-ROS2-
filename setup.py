@@ -28,7 +28,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-              'topic_watchdog = mypkg.topic_watchdog:main',
+              'talker = mypkg.talker:main',
+              #'listener = mypkg.listener:main',
         ],
     },
 )
