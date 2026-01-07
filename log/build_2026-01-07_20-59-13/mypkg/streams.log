@@ -1,0 +1,39 @@
+[2.130s] Invoking command in '/home/tatsunori/robosys2025-ROS2-': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/tatsunori/robosys2025-ROS2-/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/tatsunori/robosys2025-ROS2-/build/mypkg/build install --record /home/tatsunori/robosys2025-ROS2-/build/mypkg/install.log --single-version-externally-managed install_data
+[2.425s] running egg_info
+[2.426s] creating build/mypkg/mypkg.egg-info
+[2.447s] writing build/mypkg/mypkg.egg-info/PKG-INFO
+[2.448s] writing dependency_links to build/mypkg/mypkg.egg-info/dependency_links.txt
+[2.448s] writing entry points to build/mypkg/mypkg.egg-info/entry_points.txt
+[2.448s] writing requirements to build/mypkg/mypkg.egg-info/requires.txt
+[2.449s] writing top-level names to build/mypkg/mypkg.egg-info/top_level.txt
+[2.449s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.492s] reading manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.493s] adding license file 'LICENSE'
+[2.493s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[2.493s] running build
+[2.494s] running build_py
+[2.494s] creating /home/tatsunori/robosys2025-ROS2-/build/mypkg/build
+[2.494s] creating /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib
+[2.495s] creating /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib/mypkg
+[2.495s] copying mypkg/topic_watchdog.py -> /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib/mypkg
+[2.496s] copying mypkg/__init__.py -> /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib/mypkg
+[2.496s] running install
+[2.503s] running install_lib
+[2.522s] creating /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.523s] copying /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib/mypkg/topic_watchdog.py -> /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.523s] copying /home/tatsunori/robosys2025-ROS2-/build/mypkg/build/lib/mypkg/__init__.py -> /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg
+[2.523s] byte-compiling /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg/topic_watchdog.py to topic_watchdog.cpython-312.pyc
+[2.525s] byte-compiling /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg/__init__.py to __init__.cpython-312.pyc
+[2.525s] running install_data
+[2.525s] creating /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/ament_index
+[2.525s] creating /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/ament_index/resource_index
+[2.525s] creating /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/ament_index/resource_index/packages
+[2.526s] copying resource/mypkg -> /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/ament_index/resource_index/packages
+[2.526s] copying package.xml -> /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/mypkg
+[2.526s] copying launch/topic_watchdog.launch.py -> /home/tatsunori/robosys2025-ROS2-/install/mypkg/share/mypkg
+[2.527s] running install_egg_info
+[2.547s] Copying build/mypkg/mypkg.egg-info to /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages/mypkg-0.0.0-py3.12.egg-info
+[2.548s] running install_scripts
+[2.726s] Installing topic_watchdog script to /home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/mypkg
+[2.727s] writing list of installed files to '/home/tatsunori/robosys2025-ROS2-/build/mypkg/install.log'
+[2.766s] Invoked command in '/home/tatsunori/robosys2025-ROS2-' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/tatsunori/robosys2025-ROS2-/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tatsunori/robosys2025-ROS2-/install/mypkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/tatsunori/robosys2025-ROS2-/build/mypkg/build install --record /home/tatsunori/robosys2025-ROS2-/build/mypkg/install.log --single-version-externally-managed install_data

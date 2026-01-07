@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: mypkg
+Version: 0.0.0
+Summary: ロボットシステム学2025課題
+Maintainer: tatsunori
+Maintainer-email: Sugano.yhogehoge@gmail.com
+License: SPDX-Licnce-Identifier: BSD-3-Clause
+Provides-Extra: test
+License-File: LICENSE
