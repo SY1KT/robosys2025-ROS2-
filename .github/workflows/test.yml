@@ -3,36 +3,12 @@ on: push
 
 jobs:
   test:
-    runs-on: ubuntu-22.04
-
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.7", "3.8", "3.9","3.10",]
     steps:
     - uses: actions/checkout@v3
 
-    - name: Install ROS 2 Humble + colcon
-      run: |
-        sudo apt update
-        sudo apt install -y software-properties-common
-        sudo add-apt-repository universe
-        sudo apt update
-        sudo apt install -y curl gnupg lsb-release
-        sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
-          -o /usr/share/keyrings/ros-archive-keyring.gpg
-        echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
-          http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
-          | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
-        sudo apt update
-        sudo apt install -y \
-          ros-humble-ros-base \
-          python3-colcon-common-extensions
-
-    - name: Build workspace
-      run: |
-        source /opt/ros/humble/setup.bash
-        colcon build
-
-    - name: Run test
-      run: |
-        source /opt/ros/humble/setup.bash
-        source install/setup.bash
-        bash -xv ./test/test.bash
-
+    - name: All test
+      run: bash -xv  ./test/test.bash
