@@ -1,15 +1,39 @@
 # robosys2025-ROS2-
-ロボットシステム学課題2　
+ロボットシステム学課題2  
+ROS2を用いたトピック通信の基礎を学習するためのパッケージです。
 
-## ノード一覧
 
+---
+
+## ノード構成
+
+### smart_talker ノード
+
+| 項目 | 内容 |
+|---|---|
+| ノード名 | `smart_talker` |
+| executable | `talker` |
+| 実装 | Python（rclpy） |
+
+---
 
 ## トピック一覧
+
 ### Publish
 
 | トピック名 | 型 | 説明 |
 |---|---|---|
-| /countup | std_msgs/msg/Int16 | カウント値 |
+| `/countup` | `std_msgs/msg/Int16` | カウントアップ値 |
+| `/diff` | `std_msgs/msg/Int16` | count と入力値との差 |
+| `/status` | `std_msgs/msg/String` | ノード状態 |
+
+### Subscribe
+
+| トピック名 | 型 | 説明 |
+|---|---|---|
+| `/sensor_value` | `std_msgs/msg/Int16` | 他ノードからの入力 |
+
+---
 
 ## 入出力例
 ```bash
