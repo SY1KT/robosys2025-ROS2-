@@ -2,8 +2,6 @@
 #SPDX-FileCopyrightText: 2025 Tatsunori Kanno
 #SPDX-License-Identifier: BSD-3-Clause
 
-#!/usr/bin/env bash
-
 set -e
 
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
