@@ -1,17 +1,31 @@
 # robosys2025-ROS2-
-ロボットシステム学課題2　トピックの「沈黙」を検出するROS2パッケージ  
-指定したトピックが一定時間更新されなかったら警告を出します。
+ロボットシステム学課題2　
+
+## ノード一覧
+
+
+## トピック一覧
+### Publish
+
+| トピック名 | 型 | 説明 |
+|---|---|---|
+| /countup | std_msgs/msg/Int16 | カウント値 |
 
 ## 入出力例
 ```bash
-$ ros2 run mypkg topic_watchdog
-[INFO] [1767190760.863005239] [topic_watchdog]: Watching "/chatter" timeout=1.0s
-[WARN] [1767190761.851018981] [topic_watchdog]: WARN: /chatter timeout (1.00s)
-[WARN] [1767190762.051026358] [topic_watchdog]: WARN: /chatter timeout (1.20s)
-[WARN] [1767190762.251031843] [topic_watchdog]: WARN: /chatter timeout (1.40s)
-[WARN] [1767190762.451059284] [topic_watchdog]: WARN: /chatter timeout (1.60s)
-[WARN] [1767190762.652511251] [topic_watchdog]: WARN: /chatter timeout (1.80s)
-[WARN] [1767190762.851044803] [topic_watchdog]: WARN: /chatter timeout (2.00s)
+$ ros2 run mypkg talker
+[INFO] [1767859022.473146342] [smart_talker]: SmartTalker started
+[INFO] [1767859022.957002387] [smart_talker]: count=0, sensor=0, diff=0
+[INFO] [1767859023.457610538] [smart_talker]: count=1, sensor=0, diff=1
+[INFO] [1767859023.957033728] [smart_talker]: count=2, sensor=0, diff=2
+[INFO] [1767859024.457031415] [smart_talker]: count=3, sensor=0, diff=3
+[INFO] [1767859024.957109836] [smart_talker]: count=4, sensor=0, diff=4
+[INFO] [1767859025.457021563] [smart_talker]: count=5, sensor=0, diff=5
+[INFO] [1767859025.957305497] [smart_talker]: count=6, sensor=0, diff=6
+[INFO] [1767859026.457131918] [smart_talker]: count=7, sensor=0, diff=7
+[INFO] [1767859026.957422710] [smart_talker]: count=8, sensor=0, diff=8
+[INFO] [1767859027.456918934] [smart_talker]: count=9, sensor=0, diff=9
+[INFO] [1767859027.957139190] [smart_talker]: count=10, sensor=0, diff=10 
 ```
 ## ソフトウェア
 - Python
